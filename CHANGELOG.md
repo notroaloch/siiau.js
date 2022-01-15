@@ -1,3 +1,8 @@
+## 1.0.1 (14 Enero, 2021)
+
+- Actualizado README
+- Actualizado package.json
+
 ## 1.0.0 (14 Enero, 2021)
 
 ### Añadido

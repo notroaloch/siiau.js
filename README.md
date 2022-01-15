@@ -1,5 +1,7 @@
 # siiau.js
 
+![npm (scoped)](https://img.shields.io/npm/v/@notroaloch/siiau.js) ![npm bundle size (scoped)](https://img.shields.io/bundlephobia/min/@notroaloch/siiau.js) ![Libraries.io dependency status for latest release, scoped npm package](https://img.shields.io/librariesio/release/npm/@notroaloch/siiau.js) ![NPM](https://img.shields.io/npm/l/@notroaloch/siiau.js)
+
 Librería para la consulta de información de SIIAU
 
 ## Instalación
