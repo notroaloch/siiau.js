@@ -1,0 +1,4 @@
+/node_modules
+
+# Development test files
+*.test.js
