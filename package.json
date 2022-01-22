@@ -1,6 +1,6 @@
 {
 	"name": "@notroaloch/siiau.js",
-	"version": "1.0.1",
+	"version": "2.0.0",
 	"description": "Librería para la consulta de información de SIIAU",
 	"main": "src/index.js",
 	"scripts": {
@@ -10,8 +10,10 @@
 	"license": "MIT",
 	"dependencies": {
 		"axios": "^0.24.0",
+		"axios-cookiejar-support": "^2.0.3",
 		"cheerio": "^1.0.0-rc.10",
-		"csvtojson": "^2.0.10"
+		"csvtojson": "^2.0.10",
+		"tough-cookie": "^4.0.0"
 	},
 	"keywords": [
 		"siiaujs",

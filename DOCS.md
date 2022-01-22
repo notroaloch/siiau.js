@@ -1,6 +1,6 @@
 # Documentación de API
 
-## getAcademicTermsAndCampus
+## getAcademicTermsAndCampus()
 
 Obtiene los ciclos escolares y los centros universitarios de la red UdeG
 
@@ -16,7 +16,7 @@ res => {
 }
 ```
 
-## getMajorsByCampus
+## getMajorsByCampus(campusCode)
 
 Obtiene las carreras ofertadas en el centro universitario especificado
 
@@ -29,7 +29,7 @@ res => {
 }
 ```
 
-## getCoursesByCampus
+## getCoursesByCampus(campusCode)
 
 Obtiene las materias ofertadas en el centro universitario especificado  
 _NOTA: El desempeño se ve afectado debido a la naturaleza de la petición y el tiempo de respuesta del servidor SIIAU_
@@ -43,7 +43,7 @@ res => {
 }
 ```
 
-## getAcademicOffer
+## getAcademicOffer(config)
 
 Obtiene la oferta academica para los parametros especificados
 
@@ -65,7 +65,7 @@ res => {
         availableSeats,
         schedule: [{
             sessions,
-            time,
+            time: {start, end},
             days,
             building,
             room,
@@ -73,6 +73,33 @@ res => {
         },...],
         teacher
     },...],
+    error: null
+}
+```
+
+## getStudentInfo(config)
+
+Obtiene información del estudiante
+
+```
+const res = await SiiauJs.getStudentInfo({
+    studentCode: '123456789',
+    password: 'secret123',
+});
+
+res => {
+    data: {
+        basicInfo: {
+            code,
+            name,
+            genre,
+            birthDate,
+            curp,
+            email,
+            profilePictureUrl,
+            signatureUrl
+        }
+    },
     error: null
 }
 ```

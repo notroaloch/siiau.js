@@ -137,8 +137,15 @@ const getAcademicOfferFromHTML = (html) => {
 				let schedule = {};
 
 				schedule.sessions = $(e).children('td:nth-child(1)').text();
-				schedule.time = $(e).children('td:nth-child(2)').text();
-				schedule.days = $(e).children('td:nth-child(3)').text();
+
+				const timeString = $(e).children('td:nth-child(2)').text();
+				const { start, end } = formater.formatScheduleTime(timeString);
+				schedule.time = { start, end };
+
+				const daysString = $(e).children('td:nth-child(3)').text();
+				const days = formater.formatScheduleDays(daysString);
+				schedule.days = days;
+
 				schedule.building = $(e).children('td:nth-child(4)').text();
 				schedule.room = $(e).children('td:nth-child(5)').text();
 				schedule.period = $(e).children('td:nth-child(6)').text();

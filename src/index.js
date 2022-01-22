@@ -1,4 +1,5 @@
 const siiauOfferModule = require('./modules/siiau-offer/lib');
+const siiauStudentModule = require('./modules/siiau-student/lib');
 
 class SiiauJs {
 	static async getAcademicTermsAndCampus() {
@@ -15,6 +16,10 @@ class SiiauJs {
 
 	static async getAcademicOffer(config) {
 		return await siiauOfferModule.getAcademicOffer(config);
+	}
+
+	static async getStudentInfo(config) {
+		return await siiauStudentModule.getStudentInfo(config);
 	}
 }
 
